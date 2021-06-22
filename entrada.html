@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,7 +11,7 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
-    <title>Document</title>
+    <title>Conselho Tutelar</title>
   </head>
   <body>
     <h1 class="text-center">Conselho Tutelar</h1>
@@ -24,7 +24,7 @@
           <div class="row m-2">
             <span class="col-1">Zona</span>
             <div class="col-10">
-              <select class="form-control col-12">
+              <select class="form-control col-12" name="zona">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -36,7 +36,7 @@
             <span class="col-1">Seção</span>
 
             <div class="col-10">
-              <select class="form-control col-12">
+              <select class="form-control col-12" name="secao">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -47,7 +47,7 @@
           <div class="row m-2">
             <span class="col-1">Urna</span>
             <div class="col-10">
-              <select class="form-control col-12">
+              <select class="form-control col-12" name="urna">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -62,55 +62,92 @@
           <div class="row m-2">
             <span class="col-2">Candidato 1</span>
             <div class="col-10">
-              <input type="number"
-              class="form-control" name="candidato1" required />
+              <input
+                type="number"
+                min="0"
+                class="form-control"
+                name="candidato1"
+                required
+              />
             </div>
           </div>
           <div class="row m-2">
             <span class="col-2">Candidato 2</span>
             <div class="col-10">
-              <input type="number"
-              class="form-control" name="candidato2" required />
+              <input
+                type="number"
+                min="0"
+                class="form-control"
+                name="candidato2"
+                required
+              />
             </div>
           </div>
           <div class="row m-2">
             <span class="col-2">Candidato 3</span>
             <div class="col-10">
-              <input type="number"
-              class="form-control" name="candidato3" required />
+              <input
+                type="number"
+                min="0"
+                class="form-control"
+                name="candidato3"
+                required
+              />
             </div>
           </div>
           <div class="row m-2">
             <span class="col-2">Candidato 4</span>
             <div class="col-10">
-              <input type="number"
-              class="form-control" name="candidato4" required />
+              <input
+                type="number"
+                min="0"
+                class="form-control"
+                name="candidato4"
+                required
+              />
             </div>
           </div>
           <div class="row m-2">
             <span class="col-2">Candidato 5</span>
             <div class="col-10">
-              <input type="number"
-              class="form-control" name="candidato5" required />
+              <input
+                type="number"
+                min="0"
+                class="form-control"
+                name="candidato5"
+                required
+              />
             </div>
           </div>
           <div class="row m-2">
             <span class="col-2">Brancos</span>
             <div class="col-10">
-              <input type="number"
-              class="form-control" name="brancos" required />
+              <input
+                min="0"
+                type="number"
+                class="form-control"
+                name="brancos"
+                required
+              />
             </div>
           </div>
           <div class="row m-2">
             <span class="col-2">Nulos</span>
             <div class="col-10">
-              <input type="number"
-              class="form-control" name="nulos" required />
+              <input
+                min="0"
+                type="number"
+                class="form-control"
+                name="nulos"
+                required
+              />
             </div>
           </div>
         </div>
       </div>
-     <div class="text-center"><button class="btn-primary p-2" type="submit">Enviar</button></div> 
+      <div class="text-center">
+        <button class="btn-primary p-2" type="submit">Enviar</button>
+      </div>
     </form>
 
     <script
