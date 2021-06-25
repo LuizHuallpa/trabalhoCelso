@@ -6,7 +6,9 @@
 #
 # Structure for table "votacao"
 #
-
+drop database if exists `urnas`; 
+create database `urnas`;
+use `urnas`;
 DROP TABLE IF EXISTS `votacao`;
 CREATE TABLE `votacao` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
