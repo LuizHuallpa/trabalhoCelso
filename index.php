@@ -1,7 +1,12 @@
+<?php 
+	include("Votos.php");
+    //inicia a se��o para poder usar variaveis
+   
+ ?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
@@ -16,11 +21,11 @@
   <body>
     <h1 class="text-center">Conselho Tutelar</h1>
     <h5 class="text-center">Informe os dados para contagem</h5>
-    <h5 class="text-center">Todos os campos são preenchimento obrigatório</h5>
-    <form name="form" id="form">
+    <h5 class="text-center">Todos os campos sao preenchimento obrigatorio</h5>
+    <form name="form" id="form" action="contagem.php" method="POST">
       <div class="row">
         <div class="col-6">
-          <h3 class="text-center mb-4">Identificação da urna</h3>
+          <h3 class="text-center mb-4">Identificacao da urna</h3>
           <div class="row m-2">
             <span class="col-1">Zona</span>
             <div class="col-10">
@@ -33,7 +38,7 @@
             </div>
           </div>
           <div class="row m-2">
-            <span class="col-1">Seção</span>
+            <span class="col-1">secao</span>
 
             <div class="col-10">
               <select class="form-control col-12" name="secao">
