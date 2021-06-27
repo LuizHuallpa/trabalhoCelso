@@ -10,3 +10,23 @@
     font: 400 15px/1.8 "Lato", sans-serif;
     color: #777;
   }
+
+  .bgIndex{
+    background-image:url("./img/bg2.jpg");
+    width: 100vw;
+    height: 100vh;
+    color: white;
+  }
+
+  #h1,#span,#a{
+    display: none;
+  }
+
+  .bgEntrada{
+    background-color: #6c757d;
+    position: absolute;
+    opacity: 0.6;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
