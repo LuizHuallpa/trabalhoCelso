@@ -19,6 +19,7 @@
 	require_once "settings.php";
     $db = new Database();
     $vot_cand = array( array("Votos"=> $db->Total_Cand(1),"Nome"=>"Candidato 1"), array( "Votos"=>$db->Total_Cand(2),"Nome"=>"Candidato 2"), array("Votos"=> $db->Total_Cand(3),"Nome"=>"Candidato 3"), array( "Votos"=>$db->Total_Cand(4),"Nome"=>"Candidato 4"),array('Votos'=>  $db->Total_Cand(5),"Nome"=>"Candidato 5"),array( "Votos"=>$db->Tot_bran(),"Nome"=>"Branco"),array( "Votos"=> $db->Tot_null(),"Nome"=>"nulo"));
+    $sum_tot=0;
 	foreach($vot_cand as $item) {
 		$sum_tot += $item['Votos'];
 	}
@@ -33,7 +34,7 @@
 	
    echo '
     <span>Vencedor</span><input class="form-control col-6" readonly type="text" placeholder="'.$vot_cand[0]['Nome'].' - '.$vot_cand[0]['Votos'].' Votos - '.number_format(($vot_cand[0]['Votos']*100)/$sum_tot,2).'%">
-    <span>Vice</span><input class="form-control col-6" readonly type="text" placeholder="'.$vot_cand[0]['Nome'].' - '.$vot_cand[1]['Votos'].' Votos - '.number_format(($vot_cand[1]['Votos']*100)/$sum_tot,2).'%">
+    <span>Vice</span><input class="form-control col-6" readonly type="text" placeholder="'.$vot_cand[1]['Nome'].' - '.$vot_cand[1]['Votos'].' Votos - '.number_format(($vot_cand[1]['Votos']*100)/$sum_tot,2).'%">
 	';
 ?>
 </div>
