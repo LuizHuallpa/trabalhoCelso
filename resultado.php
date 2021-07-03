@@ -12,14 +12,30 @@
 </head>
 <body>
     <h1 class="title text-center">Resultado Final</h1>
-    <div class="row">
-<div class="card col-lg-6 col-sm-12 m-auto mt-5">
+	<div class="card col-lg-6 col-sm-12 m-auto mt-5">
     <div class="card-body">
     <h5 class="card-title text-center">Resultado Final</h5>
-   
-    <span>Vencedor</span><input class="form-control col-6" readonly type="text" placeholder="20">
-    <span>Vice</span><input class="form-control col-6" readonly type="text" placeholder="20">
-
+   <?php
+	require_once "settings.php";
+    $db = new Database();
+    $vot_cand = array( array("Votos"=> $db->Total_Cand(1),"Nome"=>"Candidato 1"), array( "Votos"=>$db->Total_Cand(2),"Nome"=>"Candidato 2"), array("Votos"=> $db->Total_Cand(3),"Nome"=>"Candidato 3"), array( "Votos"=>$db->Total_Cand(4),"Nome"=>"Candidato 4"),array('Votos'=>  $db->Total_Cand(5),"Nome"=>"Candidato 5"),array( "Votos"=>$db->Tot_bran(),"Nome"=>"Branco"),array( "Votos"=> $db->Tot_null(),"Nome"=>"nulo"));
+	foreach($vot_cand as $item) {
+		$sum_tot += $item['Votos'];
+	}
+	unset($vot_cand[6]);
+	unset($vot_cand[5]);
+	rsort($vot_cand);
+	foreach($vot_cand as $item) {
+		echo $item['Votos'] .'--'.$item['Nome'].'</br>';
+		
+	}
+	
+	
+   echo '
+    <span>Vencedor</span><input class="form-control col-6" readonly type="text" placeholder="'.$vot_cand[0]['Nome'].' - '.$vot_cand[0]['Votos'].' Votos - '.number_format(($vot_cand[0]['Votos']*100)/$sum_tot,2).'%">
+    <span>Vice</span><input class="form-control col-6" readonly type="text" placeholder="'.$vot_cand[0]['Nome'].' - '.$vot_cand[1]['Votos'].' Votos - '.number_format(($vot_cand[1]['Votos']*100)/$sum_tot,2).'%">
+	';
+?>
 </div>
 
 
